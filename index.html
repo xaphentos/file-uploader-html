@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>File uploader on HTML</h2>
+    <input type="file" id="FileInput">
+    <p id="fileName">File name</p>
+    <script>
+        document.getElementById('FileInput').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            document.getElementById('fileName').textContent = file ? `Selected file: ${file.name}` : '';
+        });
+    </script>
+</body>
+</html>
